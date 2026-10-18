@@ -15,7 +15,10 @@ jobs:
         uses: geode-sdk/build-geode-mod@main
         id: build
         with:
-          sdk: nightly
+          sdk: v5.11.2
+          bindings: geode-sdk/bindings
+          bindings-ref: f8aec5d1
+          target: Win64
 
       - uses: actions/upload-artifact@v4
         with:
