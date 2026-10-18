@@ -13,8 +13,9 @@ jobs:
 
       - name: Build the mod
         uses: geode-sdk/build-geode-mod@main
+        id: build
+
+      - uses: actions/upload-artifact@v4
         with:
-          sdk: nightly
-          bindings: geode-sdk/bindings
-          bindings-ref: main
-          target: Win64
+          name: press-buffer
+          path: ${{ steps.build.outputs.build-output }}
