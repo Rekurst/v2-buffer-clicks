@@ -14,7 +14,7 @@ jobs:
       - name: Build the mod
         uses: geode-sdk/build-geode-mod@main
         with:
-          sdk: v5.11.2
+          sdk: nightly
           bindings: geode-sdk/bindings
           bindings-ref: main
           target: Win64
